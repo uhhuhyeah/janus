@@ -69,7 +69,19 @@ set visualbell
 set guioptions-=T
 
 " Default gui color scheme
-color ir_black
+color RailsCasts2
+
+" More effecint vim buffers
+set hidden
+ 
+let mapleader = ","
+ 
+set history=1000
+ 
+set guifont=Bitstream_Vera_Sans_Mono:h11
+ 
+" Extended `%` matching
+runtime macros/matchit.vim
 
 " ConqueTerm wrapper
 function StartTerm()

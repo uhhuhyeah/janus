@@ -25,6 +25,17 @@ set smartcase
 set wildmode=list:longest,list:full
 set wildignore+=*.o,*.obj,.git,*.rbc,*.class,.svn,vendor/gems/*
 
+" Allows vim to manage mutiple buffers effectively
+set hidden
+ 
+let mapleader = ","
+ 
+set history=1000
+ 
+" Extended '%' matching
+runtime macros/matchit.vim
+
+
 " Status bar
 set laststatus=2
 
@@ -125,7 +136,7 @@ set modeline
 set modelines=10
 
 " Default color scheme
-color desert
+color RailsCasts2
 
 " Directories for swp files
 set backupdir=~/.vim/backup
@@ -142,6 +153,9 @@ runtime! macros/matchit.vim
 
 " Show (partial) command in the status line
 set showcmd
+
+" Pathogen
+call pathogen#runtime_append_all_bundles()
 
 " Include user's local vim config
 if filereadable(expand("~/.vimrc.local"))
